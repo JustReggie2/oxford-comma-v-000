@@ -4,9 +4,8 @@ def oxford_comma(array)
   elsif array.length == 2
     array.join(" and ")
   else
-    array.each do |words|
-      "#{words}, "
-    end
+    array[-2] = "#{array[-2]} and "
+    array.join(", ")
     #array.join(", ").insert(-2, " and ")
   end
 
